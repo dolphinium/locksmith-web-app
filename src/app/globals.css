@@ -28,3 +28,21 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Masonry Grid Styles */
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -16px; /* gutter size offset, corresponds to -ml-4 */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 16px; /* gutter size, corresponds to pl-4 */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div { /* Targets the div wrapper for each image in Gallery.tsx */
+  margin-bottom: 16px; /* corresponds to mb-4 */
+}
