@@ -34,7 +34,7 @@ export default function HomePage() {
             <p className="text-lg text-blue-200 mb-8">1995&apos;ten Beri Güvenle Hizmetinizdeyiz</p> {/* Lighter accent, escaped apostrophe */}
             <a
               href="tel:+905325862228"
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold py-3 px-8 rounded-lg text-lg transition duration-300" /* Adjusted button */
+              className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold py-2 px-4 text-base sm:py-3 sm:px-6 sm:text-lg rounded-lg transition duration-300" /* Responsive classes */
             >
               Hemen Ara: +90 532 586 22 28
             </a>
