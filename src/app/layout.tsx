@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "Erdemli'de 7/24 profesyonel çilingir ve anahtarcılık hizmetleri.",
     type: "website",
     locale: "tr_TR",
-    url: "https://www.anahtarciosman-erdemli.com", // Replace with your actual domain when deployed
+    url: "https://anahtarciosman.vercel.app/", // Replace with your actual domain when deployed
     siteName: "Anahtarcı Osman",
     images: [
       {
