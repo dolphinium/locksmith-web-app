@@ -97,7 +97,7 @@ export default function HomePage() {
             <div className="max-w-4xl mx-auto"> {/* Added max-width wrapper */}
               <div className="aspect-[16/9] rounded-lg shadow-xl overflow-hidden"> {/* Updated aspect ratio class for Tailwind v4 */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d224.58522531998887!2d34.311082638096345!3d36.6066166369151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zTWVya2V6K01haC4rxZ5laGl0K1PDvGxleW1hbivFnmFoaW4rU2suK05vKzQrQStlcmRlbWxpJTJGbWVyc2luJTJDK0VyZGVtbGkrMzM3ODA!5e0!3m2!1sen!2str!4v1746803993925!5m2!1sen!2str"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200.17609471438988!2d34.31102568639799!3d36.60670384873761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d8632251fe2be7%3A0xb7eb0ba290c1fe28!2zQWsgUGFydGktZXJkZW1saSBCZWxkZSDEsGzDp2UgQmHFn2thbmzEscSfxLE!5e0!3m2!1sen!2str!4v1746806081207!5m2!1sen!2str"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
