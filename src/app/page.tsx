@@ -31,7 +31,7 @@ export default function HomePage() {
           <div className="container mx-auto">
             <h1 className="text-5xl font-bold mb-4 text-white">Anahtarcı Osman</h1> {/* Ensure contrast */}
             <p className="text-xl mb-2 text-blue-100">Elektronik Anahtar & Çilingirlik Hizmetleri</p> {/* Lighter accent */}
-            <p className="text-lg text-blue-200 mb-8">1995'ten Beri Güvenle Hizmetinizdeyiz</p> {/* Lighter accent, escaped apostrophe */}
+            <p className="text-lg text-blue-200 mb-8">1995&apos;ten Beri Güvenle Hizmetinizdeyiz</p> {/* Lighter accent, escaped apostrophe */}
             <a
               href="tel:+905325862228"
               className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold py-3 px-8 rounded-lg text-lg transition duration-300" /* Adjusted button */
@@ -132,7 +132,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300" /* Changed Instagram button color */
               >
-                Instagram'da Takip Edin
+                Instagram&apos;da Takip Edin
               </a>
             </div>
           </div>
