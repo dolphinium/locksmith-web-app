@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-200 p-6 text-center text-sm text-gray-600 border-t border-gray-300"> {/* Adjusted colors */}
+    <footer className="bg-[var(--background)] p-6 text-center text-sm text-[var(--foreground)] border-t border-neutral-700"> {/* Adjusted colors */}
       <p>&copy; {new Date().getFullYear()} Anahtarcı Osman Elektronik Anahtar Çilingirlik Hizmetleri.</p>
       <p>Tüm Hakları Saklıdır. Erdemli / Mersin.</p>
     </footer>

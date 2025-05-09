@@ -27,14 +27,14 @@ export default function HomePage() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-20 px-4 text-center"> {/* Lighter gradient */}
+        <section className="py-20 px-4 text-center"> {/* Removed background gradient */}
           <div className="container mx-auto">
-            <h1 className="text-5xl font-bold mb-4 text-white">Anahtarcı Osman</h1> {/* Ensure contrast */}
-            <p className="text-xl mb-2 text-blue-100">Elektronik Anahtar & Çilingirlik Hizmetleri</p> {/* Lighter accent */}
-            <p className="text-lg text-blue-200 mb-8">1995&apos;ten Beri Güvenle Hizmetinizdeyiz</p> {/* Lighter accent, escaped apostrophe */}
+            <h1 className="text-5xl font-bold mb-4 text-[var(--accent-green)]">Anahtarcı Osman</h1> {/* Use accent green */}
+            <p className="text-xl mb-2 text-[var(--foreground)]">Elektronik Anahtar & Çilingirlik Hizmetleri</p> {/* Use foreground color */}
+            <p className="text-lg text-[var(--foreground)] mb-8">1995`ten Beri Güvenle Hizmetinizdeyiz</p> {/* Use foreground color, escaped apostrophe */}
             <a
               href="tel:+905325862228"
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold py-2 px-4 text-base sm:py-3 sm:px-6 sm:text-lg rounded-lg transition duration-300" /* Responsive classes */
+              className="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 text-base sm:py-3 sm:px-6 sm:text-lg rounded-lg transition duration-300" /* Even darker green button, white text */
             >
               Hemen Ara: +90 532 586 22 28
             </a>
@@ -42,14 +42,14 @@ export default function HomePage() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="py-16 bg-white px-4"> {/* White background */}
+        <section id="services" className="py-16 px-4"> {/* Removed white background */}
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-10 text-blue-600">Hizmetlerimiz</h2> {/* Darker blue accent */}
+            <h2 className="text-3xl font-bold mb-10 text-[var(--accent-green)]">Hizmetlerimiz</h2> {/* Use accent green */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-blue-500/30 transition-shadow duration-300 flex flex-col items-center text-center"> {/* Light gray card bg */}
-                  <service.icon className="h-12 w-12 text-blue-500 mb-4" /> {/* Adjusted icon color */}
-                  <h3 className="text-xl font-semibold text-gray-700 mb-2">{service.name}</h3> {/* Darker text */}
+                <div key={index} className="bg-neutral-800 p-6 rounded-lg shadow-lg hover:shadow-[0_0_15px_var(--accent-green)] transition-shadow duration-300 flex flex-col items-center text-center"> {/* Darker card bg, green shadow */}
+                  <service.icon className="h-12 w-12 text-[var(--accent-green)] mb-4" /> {/* Use accent green for icon */}
+                  <h3 className="text-xl font-semibold text-[var(--foreground)] mb-2">{service.name}</h3> {/* Use foreground color */}
                 </div>
               ))}
             </div>
@@ -57,24 +57,26 @@ export default function HomePage() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 bg-gray-50 px-4"> {/* Light gray background */}
+        <section id="about" className="py-16 bg-neutral-800 px-4"> {/* Darker background */}
           <div className="container mx-auto text-center md:text-left md:flex md:items-center">
             <div className="md:w-1/3 mb-8 md:mb-0 md:pr-8 flex justify-center md:justify-start">
-              <Image
-                src="/logo.png"
-                alt="Anahtarcı Osman Şirket Logosu"
-                width={200}
-                height={200}
-                className="rounded-full shadow-lg object-contain"
-              />
+              <div className="bg-gray-100 p-2 rounded-full inline-block">
+                <Image
+                  src="/logo.png"
+                  alt="Anahtarcı Osman Şirket Logosu"
+                  width={200}
+                  height={200}
+                  className="rounded-full shadow-lg object-contain"
+                />
+              </div>
             </div>
             <div className="md:w-2/3">
-              <h2 className="text-3xl font-bold mb-6 text-blue-600">Hakkımızda</h2> {/* Darker blue accent */}
-              <p className="text-lg mb-4 text-gray-700"> {/* Darker text */}
+              <h2 className="text-3xl font-bold mb-6 text-[var(--accent-green)]">Hakkımızda</h2> {/* Use accent green */}
+              <p className="text-lg mb-4 text-[var(--foreground)]"> {/* Use foreground color */}
                 Osman Levent Kaya yönetimindeki Anahtarcı Osman, 1995 yılından bu yana Erdemli ve çevresinde profesyonel çilingirlik ve anahtar çözümleri sunmaktadır.
                 Müşteri memnuniyetini ön planda tutarak, 7 gün 24 saat kesintisiz hizmet vermekteyiz.
               </p>
-              <p className="text-lg text-gray-700"> {/* Darker text */}
+              <p className="text-lg text-[var(--foreground)]"> {/* Use foreground color */}
                 Ev, oto, kasa çilingir hizmetlerinin yanı sıra, kumandalı anahtar yapımı, yedek anahtar çoğaltma, kilit sistemleri ve garaj/kepenk kumanda tamiri gibi geniş bir yelpazede hizmet sunuyoruz.
                 Teknolojiyi yakından takip ederek elektronik anahtar çözümlerinde de yanınızdayız.
               </p>
@@ -83,17 +85,17 @@ export default function HomePage() {
         </section>
 
         {/* Gallery Section */}
-        <section id="gallery" className="py-16 bg-white px-4"> {/* White background */}
+        <section id="gallery" className="py-16 px-4"> {/* Removed white background */}
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold mb-10 text-blue-600 text-center">Galeri</h2> {/* Darker blue accent */}
+            <h2 className="text-3xl font-bold mb-10 text-[var(--accent-green)] text-center">Galeri</h2> {/* Use accent green */}
             <Gallery />
           </div>
         </section>
 
         {/* Location Section */}
-        <section id="location" className="py-16 bg-white px-4"> {/* White background */}
+        <section id="location" className="py-16 px-4"> {/* Removed white background */}
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-10 text-blue-600">Konumumuz</h2>
+            <h2 className="text-3xl font-bold mb-10 text-[var(--accent-green)]">Konumumuz</h2> {/* Use accent green */}
             <div className="max-w-4xl mx-auto"> {/* Added max-width wrapper */}
               <div className="aspect-[16/9] rounded-lg shadow-xl overflow-hidden"> {/* Updated aspect ratio class for Tailwind v4 */}
                 <iframe
@@ -112,27 +114,27 @@ export default function HomePage() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-16 bg-gray-50 px-4"> {/* Light gray background */}
+        <section id="contact" className="py-16 bg-neutral-800 px-4"> {/* Darker background */}
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-10 text-blue-600">İletişim</h2> {/* Darker blue accent */}
-            <div className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-xl"> {/* White card bg */}
-              <p className="text-xl font-semibold mb-2 text-gray-800">Osman Levent Kaya</p> {/* Darker text */}
-              <p className="text-lg text-gray-600 mb-4"> {/* Darker text */}
+            <h2 className="text-3xl font-bold mb-10 text-[var(--accent-green)]">İletişim</h2> {/* Use accent green */}
+            <div className="max-w-lg mx-auto bg-neutral-700 p-8 rounded-lg shadow-xl"> {/* Darker card bg */}
+              <p className="text-xl font-semibold mb-2 text-[var(--foreground)]">Osman Levent Kaya</p> {/* Use foreground color */}
+              <p className="text-lg text-[var(--foreground)] mb-4"> {/* Use foreground color */}
                 Merkez Mah. Şehit Süleyman Şahin Sk. No:4/A Erdemli/Mersin, 33780
               </p>
-              <p className="text-2xl font-bold text-blue-600 mb-4"> {/* Darker blue accent for phone */}
-                <a href="tel:+905325862228" className="hover:text-blue-500 transition-colors">
+              <p className="text-2xl font-bold text-[var(--accent-green)] mb-4"> {/* Use accent green for phone */}
+                <a href="tel:+905325862228" className="hover:text-green-700 transition-colors">
                   +90 532 586 22 28
                 </a>
               </p>
-              <p className="text-lg text-gray-600 mb-6">7/24 Çilingir Hizmeti</p> {/* Darker text */}
+              <p className="text-lg text-[var(--foreground)] mb-6">7/24 Çilingir Hizmeti</p> {/* Use foreground color */}
               <a
                 href="https://www.instagram.com/anahtarciosman/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300" /* Changed Instagram button color */
+                className="inline-block bg-green-700 hover:bg-green-900 text-white font-semibold py-3 px-6 rounded-lg transition duration-300" /* Even darker green button, white text */
               >
-                Instagram&apos;da Takip Edin
+                Instagramda Takip Edin
               </a>
             </div>
           </div>
